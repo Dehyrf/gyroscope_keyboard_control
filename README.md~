@@ -1,4 +1,0 @@
-# gyroscope_keyboard_control
-Code to run on an arduino leonardo to send keypresses from wrist/other extremity movements.
-
-To use: upload the code and flash the arduino as a keyboard and run. Right now not working properly (I am looking for the correct HID keycodes for arrow keys) so do not attempt to run without fixing it. 
