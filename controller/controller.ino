@@ -274,14 +274,22 @@ void loop() {
             if(digitalRead(disableKeyPin) == LOW)  {
                 if (pitch >= tiltMinimum) {
                   Keyboard.press('s');
+                  Keyboard.press('s');
+                  Keyboard.press('s');
                 } 
                 if (pitch <= -(tiltMinimum)) {
+                     Keyboard.press('w');
+                     Keyboard.press('w');
                      Keyboard.press('w');
                 } 
                 if (roll >= tiltMinimum) {
                     Keyboard.press('d');
+                    Keyboard.press('d');
+                    Keyboard.press('d');
                 } 
                 if (roll <= -(tiltMinimum)) {
+                    Keyboard.press('a');
+                    Keyboard.press('a');
                     Keyboard.press('a');
                 } 
                 Keyboard.releaseAll();  
