@@ -1,4 +1,4 @@
 # gyroscope_keyboard_control
-***WORK IN PROGRESS, USE AT YOUR OWN RISK*** Code to run on an arduino uno that has been re-flashed as a hid device (http://wiki.sgmk-ssam.ch/index.php?title=Arduino_Uno_R3_as_HID http://mitchtech.net/arduino-usb-hid-keyboard/) to send keypresses from wrist/other extremity movements. Based on some code for an arduino-powered segway.
+Code to run on an arduino leonardo to send keypresses from wrist/other extremity movements.
 
-To use: upload the code and flash the arduino as a keyboard and run. Right now not working properly (I am looking for the correct HID keycodes for arrow keys) so do not attempt to run without fixing it. 
+To use: upload the code to leonardo, connect MPU 6050 gyro vcc to 3v, gnd to gnd, scl to scl, sda to sda, to enable keyboard output and start the program: connect gnd to digital 4, and disconnect wire to disable keyboard output/reprogram.
