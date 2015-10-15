@@ -232,27 +232,29 @@ void loop() {
             float roll = ypr[2] * 180/M_PI;
             if(digitalRead(disableKeyPin) == LOW)  {
                 if (pitch >= tiltMinimum) {
-                  Keyboard.press('s');
-                } 
-                if (pitch <= -(tiltMinimum)) {
-                     Keyboard.press('w');
-                } 
-                if (roll >= tiltMinimum) {
-                    Keyboard.press('d');
-                } 
-                if (roll <= -(tiltMinimum)) {
-                    Keyboard.press('a');
+                     Keyboard.press('s');
                 } 
                 else
-                  Keyboard.releaseAll();
-              }
-            else
-                Keyboard.releaseAll();
-              
-              }
+                  Keyboard.release('s');
+                if (pitch <= -(tiltMinimum)) {
+                     Keyboard.press('w');
+                }
+                else
+                  Keyboard.release('w'); 
+                if (roll >= tiltMinimum) {
+                     Keyboard.press('d');
+                }
+                else
+                  Keyboard.release('d'); 
+                if (roll <= -(tiltMinimum)) {
+                     Keyboard.press('a');
+                }
+                else
+                  Keyboard.release('a');
             
+              }  
         #endif
-
+    }
 
         // blink LED to indicate activity
         blinkState = !blinkState;
